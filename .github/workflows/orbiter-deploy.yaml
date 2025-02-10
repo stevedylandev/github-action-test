@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: prod
 
     steps:
       - uses: actions/checkout@v3
@@ -25,6 +24,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to Orbiter
-        run: |
-          export ORBITER_API_KEY=${{ secrets.ORBITER_API_KEY }}
-          npx orbiter-cli update -d github-action-test ./dist
+        env:
+          ORBITER_API_KEY: ${{ secrets.ORBITER_API_KEY }}
+        run: npx orbiter-cli update -d github-action-test ./dist
