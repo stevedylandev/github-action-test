@@ -26,4 +26,4 @@ jobs:
       - name: Deploy to Orbiter
         env:
           ORBITER_API_KEY: ${{ secrets.ORBITER_API_KEY }}
-        run: npx orbiter-cli update -d orbiter-action-test ./dist
+        run: npx orbiter-cli update -d github-action-test ./dist
