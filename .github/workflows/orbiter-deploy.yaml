@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Deploy to Orbiter
-        uses: orbiterhost/orbiter-github-actions@v0.0.7
+        uses: orbiterhost/orbiter-github-actions@v0.0.8
         with:
           project-name: "github-action-test" # Required
           # dist-dir: "./dist" # Required
