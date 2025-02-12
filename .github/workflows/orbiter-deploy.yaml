@@ -14,4 +14,10 @@ jobs:
 
       - name: Deploy to Orbiter
         uses: orbiterhost/orbiter-github-actions@v0.0.6
-
+        with:
+          project-name: 'github-action-test'  # Required
+          dist-dir: './dist'          # Required
+          api-key: ${{ secrets.ORBITER_API_KEY }}  # Required
+          # Optional inputs with their defaults
+          node-version: '20.x'        # Optional, defaults to '20.x'
+          build-command: 'npm run build'  # Optional, defaults to 'npm run build'
