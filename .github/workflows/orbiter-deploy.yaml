@@ -6,14 +6,14 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
       - name: Deploy to Orbiter
-        uses: orbiterhost/orbiter-github-actions@v0.0.8
+        uses: orbiterhost/orbiter-github-actions@latest
         with:
           project-name: "github-action-test" # Required
           build-dir: "./dist" # Required
